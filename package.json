@@ -1,0 +1,52 @@
+{
+  "name": "Testling-Jasmine2-Typescript",
+  "version": "0.0.1",
+  "description": "Testling with Jasmine2 and Typescript",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "build": "grunt compile",
+    "test": "./node_modules/testling/bin/cmd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:peroxyacyl/testling-jasmine2.0.0.git"
+  },
+  "keywords": [
+    "Testling",
+    "CI",
+    "Jasmine",
+    "Typescript"
+  ],
+  "author": "Seki Inoue",
+  "license": "Public Domain",
+  "contributors": [
+  ],
+  "devDependencies": {
+    "browserify": "^5.11.2",
+    "coverify": "^1.0.7",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-typescript": "^0.3.8",
+    "testling": "^1.7.0"
+  },
+  "testling": {
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ],
+    "scripts": [
+      "tests/lib/jasmine-2.0.0/jasmine.js",
+      "tests/lib/jasmine-reporters/tap_reporter.js",
+      "tests/lib/jasmine-2.0.0/boot-testling.js",
+      "dist/index.js",
+      "tests/specs/*.js",
+      "tests/SpecRunner.js"
+    ]
+  }
+}
